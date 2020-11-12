@@ -1,0 +1,105 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.section-1 div, .section-2 div, .section-3 div {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto 50px;
+}
+.section-1 div:nth-child(1){
+    background: aquamarine;
+    transform: translate(40px, 40px);
+}
+.section-1 div:nth-child(2){
+    background: antiquewhite;
+    transform: rotate(45deg);
+}
+.section-1 div:nth-child(3){
+    background: darkkhaki;
+    transform: scale(1, 0.5);
+}
+.section-1 div:nth-child(4){
+    background: darkmagenta;
+    transform: scaleX(3);
+}
+.section-1 div:nth-child(5){
+    background: darkorange;
+    transform: scaleY(2);
+}
+.section-1 div:nth-child(6){
+    background: lightcoral;
+    transform: skewX(20deg);
+}
+.section-1 div:nth-child(7){
+    background: lightseagreen;
+    transform: skewY(20deg);
+}
+.section-1 div:nth-child(8){
+    background: green;
+    transform: matrix(1.2, 1.1, 0, 1,15, 10);
+}
+
+
+.section-2 div:nth-child(1){
+    background: #003e37;
+    transform: translate3d(10px, -60px, 80px);
+    color: white;
+}
+.section-2 div:nth-child(2){
+    background: #a97dce;
+    transform: rotate3d(54, 58, 6, -40deg);
+}
+.section-2 div:nth-child(3){
+    background: #0050c7;
+    transform: perspective(4px);
+}
+.section-2 div:nth-child(4){
+    background: #0050c7;
+    transform: scale3d(4,1,2);
+}
+/*SECTION 3*/
+.section-3 div:nth-child(1) {
+    background: darkorange;
+    transition-delay: 1s;
+}
+.section-3 div:nth-child(1):hover {
+    background: #a05a06;
+    width: 500px;
+}
+.section-3 div:nth-child(2) {
+    background: #ff00bf;
+    transition-duration: 2s;
+}
+.section-3 div:nth-child(2):hover {
+    background: #9106a0;
+    height: 700px;
+}
+.section-3 div:nth-child(3) {
+    background: #37ff00;
+    transition-property: width;
+}
+.section-3 div:nth-child(3):hover {
+    background: #27a006;
+    width: 600px;
+}
+.section-3 div:nth-child(4) {
+    background: #0022ff;
+    transition-timing-function: linear;
+    transition: width 3s;
+}
+.section-3 div:nth-child(4):hover {
+    background: #00041d;
+    width: 600px;
+    color: white;
+}
+.section-3 div:nth-child(5) {
+    background: #652425;
+    transition: height 3s ease-in 2s;
+}
+.section-3 div:nth-child(5):hover {
+    background: #7b0737;
+    height: 600px;
+    color: white;
+}
