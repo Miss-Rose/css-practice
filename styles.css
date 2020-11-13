@@ -1,36 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.titles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.header-text {
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #1c0808;
+    padding: 50px;
+}
+.header-text span {
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    text-transform: uppercase;
+    animation: jump 1s infinite;
+    animation-delay: calc(.1s * var(--i))
+}
+@keyframes jump {
+    0%, 40%, 100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-20px)
+    }
+}
+/*second-title*/
+.second-title{
+    text-align: center;
+    background-color: #b48484;
+    padding: 40px;
+}
+.second-title span {
+    display: inline-block;
+    position: relative;
+    animation: rotation 5s;
+    animation-iteration-count: infinite;
+    animation-delay: calc(.1s * var(--i))
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    55% {
+        transform: rotate(135deg);
+    }
+    70% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.three-title {
+    background-color: #b86262;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+.three-title span {
+    animation: skeww 3s infinite;
+    display: inline-block;
+    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+}
+@keyframes skeww {
+    0% {
+        transform: rotateY(-45deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(45deg);
+    }
+}
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 /*section-animation*/
-.section-animation > div{
+.section-animation > div {
     width: 100px;
     height: 100px;
     text-align: center;
     margin: 0 auto 50px;
 }
-.section-animation>div:nth-child(1) {
+.section-animation > div:nth-child(1) {
     background-color: red;
     animation-name: first;
     animation-duration: 4s;
 }
 @keyframes first {
-    from {background-color: red;}
-    to {background-color: yellow;}
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
 }
-.section-animation>div:nth-child(2) {
+.section-animation > div:nth-child(2) {
     background-color: #c109be;
     animation-name: second;
     animation-duration: 6s;
 }
 @keyframes second {
-    0%   {background-color: #c109be;height: 150px;}
-    25%  {background-color: yellow; width: 150px}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    0% {
+        background-color: #c109be;
+        height: 150px;
+    }
+    25% {
+        background-color: yellow;
+        width: 150px
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
 }
-.section-animation>div:nth-child(3) {
+.section-animation > div:nth-child(3) {
     width: 100px;
     height: 50px;
     background-color: #0928c1;
@@ -41,14 +140,33 @@ main {
     left: 40px;
 }
 @keyframes third {
-    0%   {background-color:red; left:0; top:0;}
-    25%  {background-color:yellow; left:200px; top:0;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0; top:200px;}
-    100% {background-color:red; left:0; top:0;}
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
 }
-
-.section-animation>div:nth-child(4) {
+.section-animation > div:nth-child(4) {
     width: 100px;
     height: 50px;
     background-color: #ec4909;
@@ -59,13 +177,33 @@ main {
     position: relative;
 }
 @keyframes fourth {
-    0%   {background-color:red; left:0; top:0;}
-    25%  {background-color:yellow; left:200px; top:0;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0; top:200px;}
-    100% {background-color:red; left:0; top:0;}
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
 }
-.section-animation>div:nth-child(5) {
+.section-animation > div:nth-child(5) {
     background-color: #09ec64;
     animation-name: five;
     animation-duration: 3s;
@@ -75,15 +213,32 @@ main {
     position: relative;
 }
 @keyframes five {
-    0%   {background-color:red; left:0; top:0;}
-    25%  {background-color:yellow; left:200px; top:0;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0; top:200px;}
-    100% {background-color:red; left:0; top:0;}
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
 }
-
-
-
 /*sections*/
 .section-1 div, .section-2 div, .section-3 div {
     width: 200px;
@@ -91,62 +246,61 @@ main {
     text-align: center;
     margin: 0 auto 50px;
 }
-.section-1 div:nth-child(1){
+.section-1 div:nth-child(1) {
     background: aquamarine;
     transform: translate(40px, 40px);
 }
-.section-1 div:nth-child(2){
+.section-1 div:nth-child(2) {
     background: antiquewhite;
     transform: rotate(45deg);
 }
-.section-1 div:nth-child(3){
+.section-1 div:nth-child(3) {
     background: darkkhaki;
     transform: scale(1, 0.5);
 }
-.section-1 div:nth-child(4){
+.section-1 div:nth-child(4) {
     background: darkmagenta;
     transform: scaleX(3);
 }
-.section-1 div:nth-child(5){
+.section-1 div:nth-child(5) {
     background: darkorange;
     transform: scaleY(2);
 }
-.section-1 div:nth-child(6){
+.section-1 div:nth-child(6) {
     background: lightcoral;
     transform: skewX(20deg);
 }
-.section-1 div:nth-child(7){
+.section-1 div:nth-child(7) {
     background: lightseagreen;
     transform: skewY(20deg);
 }
-.section-1 div:nth-child(8){
+.section-1 div:nth-child(8) {
     background: green;
-    transform: matrix(1.2, 1.1, 0, 1,15, 10);
+    transform: matrix(1.2, 1.1, 0, 1, 15, 10);
 }
-
-
-.section-2 div:nth-child(1){
+.section-2 div:nth-child(1) {
     background: #003e37;
     transform: translate3d(10px, -60px, 80px);
     color: white;
 }
-.section-2 div:nth-child(2){
+.section-2 div:nth-child(2) {
     background: #a97dce;
     transform: rotate3d(54, 58, 6, -40deg);
 }
-.section-2 div:nth-child(3){
+.section-2 div:nth-child(3) {
     background: #0050c7;
     transform: perspective(4px);
 }
-.section-2 div:nth-child(4){
+.section-2 div:nth-child(4) {
     background: #0050c7;
-    transform: scale3d(4,1,2);
+    transform: scale3d(4, 1, 2);
 }
 /*SECTION 3*/
 .section-3 div:nth-child(1) {
     background: darkorange;
     transition-delay: 1s;
 }
+
 .section-3 div:nth-child(1):hover {
     background: #a05a06;
     width: 500px;
@@ -159,10 +313,12 @@ main {
     background: #9106a0;
     height: 700px;
 }
+
 .section-3 div:nth-child(3) {
     background: #37ff00;
     transition-property: width;
 }
+
 .section-3 div:nth-child(3):hover {
     background: #27a006;
     width: 600px;
